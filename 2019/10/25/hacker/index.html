@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Welcome to My blog - Fxck</title>
+    <title>hacker - Fxck</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="将一件事进行到底，那便是最好的结果。
-"> 
+    <meta name="description" content="渗透测试之Windows命令详解[19/03]
+特记录Windows渗透测试常用命令如下0x01 快捷命令iexpress 系统自带文件(木马)捆绑工具cleanmgr 磁盘整理gpedit.msc,"> 
     <meta name="author" content="Fxck"> 
     <link rel="alternative" href="atom.xml" title="Fxck" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -39,7 +39,7 @@
     <div class="bar" style="width: 0;"></div>
     <a id="home-icon" class="image-icon icon-home iconfont animated fadeIn" href="javascript:;" data-url="http://yoursite.com"></a>
     <div id="play-icon" title="Play/Pause" class="iconfont icon-play animated fadeIn"></div>
-    <h3 class="subtitle">Welcome to My blog</h3>
+    <h3 class="subtitle">hacker</h3>
     <div class="social">
 <!--        <div class="like-icon">-->
 <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -68,23 +68,23 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                    <a href="/categories/日常"><b>「 </b>日常<b> 」</b></a>
+                    <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                July 14, 2019
+                October 25, 2019
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2019/07/14/Welcome/" title="Welcome to My blog" class="">Welcome to My blog</a></h3>
+            <h3 class="post-title animated fadeInDown"><a href="/2019/10/25/hacker/" title="hacker" class="">hacker</a></h3>
             
                 <p class="post-count animated fadeInDown">
                     
                         <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        26
+                        4.4k
                     </span>
                     
                     
                         <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        1 mins.
+                        4 mins.
                     </span>
                     
                     
@@ -97,7 +97,7 @@
                 </p>
             
             
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E9%97%B2%E8%81%8A/" rel="tag">闲聊</a></li></ul>
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/" rel="tag">信息安全</a></li></ul>
             
         </div>
     </div>
@@ -118,7 +118,34 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn slower">
-            <p>将一件事进行到底，那便是最好的结果。</p>
+            <p>渗透测试之Windows命令详解[19/03]</p>
+<p>特记录Windows渗透测试常用命令如下<br>0x01 快捷命令<br>iexpress 系统自带文件(木马)捆绑工具<br>cleanmgr 磁盘整理<br>gpedit.msc 本地组策略<br>secpol.msc 本地安全设置<br>dcomcnfg 系统组件服务<br>eventvwr.msc 事件查看器<br>lusrmgr.msc 本地用户及用户组<br>regedit 注册表<br>taskmgr 任务管理器<br>explorer 资源管理器<br>devmgmt.msc 设备管理器<br>dcomcnfg 系统组件服务<br>control 控制面板<br>control admintools 管理工具<br>services.msc 服务<br>ncpa.cpl 本地网络<br>moconfig 启动项<br>sysdm.cpl 系统属性<br>0x02 进程命令<br>msg username | server:servername “notice:you are hack by me” 系统弹窗<br>net start 查看开启的服务<br>net stop service_name 停止服务<br>tasklist 显示在本地或远程机器上当前运行的进程列表。<br>taskkill<br>/F 指定强制终止进程。<br>/PID processid 指定要终止的进程的 PID。使用 TaskList 取得 PID。<br>schtasks 查看计划任务<br>SCHTASKS /Create /SC DAILY /TN shutdown /TR “C:\WINDOWS\System32\shutdown.exe -t 0 -s” /ST 23：00<br>成功: 成功创建计划任务 “shutdown”,每天定时关机<br>schtasks /Delete /TN shutdown 删除指定计划任务<br>还可以指定远程计算机，需要管理员权限，留待读者自查吧<br>net start service 启动服务<br>net pause service 暂停服务<br>net continue service 激活服务<br>net stop service 停止服务<br>文件命令<br>where shutdown.exe 在当前路径或path下查找程序或文件的位置<br>where /R D:\ user.rule 指定从D盘根目录递归搜索文件<br>for /r d:\ %i in (*.rule) do echo %i 指定D盘,搜索后缀为.rule的所有文件<br>find “user.rule” 比较慢<br>md [dir_name] 创建目录<br>rd [dir_name] 删除目录<br>type [file_name] 查看文件<br>start [file_name] 查看文件<br>del [file_name] 删除文件<br>copy [file_name] [target_path] 复制文件<br>move [file_name] [target_path] 移动文件<br>copy con 1.txt 创建文件 输入内容按ctrl+z<br>attrib 文件名(目录名) 查看某文件（目录）的属性<br>-A -R -S -H 去掉某文档的存档，只读。系统，隐藏属性<br>+A +R +S +H 添加某文档的存档，只读。系统，隐藏属性<br>0x03 网络命令<br>netsh wlan set hostednetwork mode=allow ssid=[111222] key=123456.com.com 设置无线网络<br>netsh wlan start hostednetwork 启动承载网络<br>netsh wlan stop hostednetwork 停止承载网络<br>ping -l 65500 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 死亡之ping<br>tracert <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 显示路由路径<br>route print 查看路由表<br>getmac 获取本地mac地址<br>arp -a 查看局域网内的主机<br>net view 显示当前域的计算机列表<br>net view \ip 查询某IP共享<br>net use 连接计算机或断开计算机与共享资源的连接<br>net use k: [ip]\c$ 把目标主机的C盘映射为本地的k盘<br>net use k: [ip]\c$ /del 断开连接<br>net share 查看本地开启的共享<br>net share ipc$ 开启ipc$共享<br>net share ipc$ /del 删除ipc$共享<br>net share c$ /del 删除c$共享<br>netstat -an 查看开启的端口和网络连接情况<br>0x04 账户命令<br>runas /noprofile /user:mymachine\administrator cmd 以管理员权限运行cmd<br>net user 查看用户<br>net user test test /add 添加用户<br>net user test 查看test的信息<br>net user test new_pass 更改用户登录密码<br>net user test /del 删除test<br>net user guest /active:yes 激活guest用户(一般使用此用户避免让管理员察觉)<br>net user guest 12345 用guest用户登陆后将密码改为12345<br>net locaLGroup 查看用户组<br>net localgroup administrators test /add 将test添加到管理员组<br>net localgroup “remote desktop users” test /add 将test加入远程访问组<br>whoami 查看当前用户<br>query 查看当前在线的用户<br>域渗透：当我们拿到一台在域的机器时<br>net view /domain 查看域列表<br>net user /domain 查看域用户<br>net group /domain 查看域中的组<br>net user administrator /domain 查看域用户administrator属于哪个组<br>net localgroup administrators /domain 查询登录过本机的域管理员<br>net config workstation 当前登录域<br>0x05 管道命令<br>|<br>将第一条命令的结果作为第二条命令的参数来使用<br>netstat -n -p tcp│find “:3389”&gt;&gt;D:\IP.log<br>││<br>同时执行多条命令，当碰到执行正确的命令后将不执行后面的命令，如果没有出现正确的命令则一直执行完所有命令<br>dir 1.gif ││ del 1.gif<br>&amp;<br>同时执行多条命令<br>ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> &amp; whoami<br>&amp;&amp;<br>同时执行多条命令，当碰到执行出错的命令后将不执行后面的命令，如果一直没有出错则一直执行完所有命令<br>dir file &amp;://192.168.0.1/database/backup.mdb &amp;&amp; copy file&amp;://192.168.0.1/database/backup.mdb</p>
+<blockquote>
+<blockquote>
+</blockquote>
+<p>追加到文件输出到文件或设备<br>ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> | find “来自” &gt;&gt; D:\IP.txt</p>
+</blockquote>
+<p>输出到文件（清空原来内容）或设备<br>ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> | find “来自” &gt; D:\IP.txt more<br>more 显示由 find 命令筛选的文本（在命令提示符窗口中每次显示一屏）<br>&lt;<br>从文件中而不是从键盘中读入命令输入<br>补充句柄知识</p>
+<ul>
+<li><blockquote>
+<p>&amp;    将一个句柄的输出写入到另一个句柄的输入中</p>
+</blockquote>
+</li>
+<li><p>a&gt;&amp;b     将句柄a的输出写入到句柄b的输入中</p>
+</li>
+<li><p>&lt;&amp;     从一个句柄读取输入并将其写入到另一个句柄输出中</p>
+</li>
+<li><p>a&lt;&amp;b     将句柄a的输入写入到句柄b的输出中</p>
+</li>
+</ul>
+<p>句柄</p>
+<ul>
+<li>STDIN  0 键盘输入    <code>&lt;</code>重定向输入操作符的默认句柄是0</li>
+<li>STDOUT 1 输出到命令提示符窗口 <code>&gt;</code>重定向输出操作符的默认句柄是1</li>
+<li>STDERR 2 错误输出到命令提示符窗口</li>
+<li>UNDEFINED 3-9 句柄由应用程序单独定义</li>
+</ul>
+<p>转自看雪论坛<br><img src="/.com//h.png" alt="滑稽"></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
